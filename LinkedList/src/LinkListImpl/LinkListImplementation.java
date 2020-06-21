@@ -65,7 +65,12 @@ public class LinkListImplementation {
 			list = insert(list, 6); 
 			list = insert(list, 7); 
 			list = insert(list, 8); 
+			list = insert(list, 9); 
 
+			System.out.println(SlowFastPointer.HasCycle(list));
+			System.out.println(SlowFastPointer.Median(list));
+			System.out.println(SlowFastPointer.FindThirdLastElement(list));
+			ReverseLinkedList.Reverse(list);
 			// Print the LinkedList 
 			printList(list); 
 		} 
