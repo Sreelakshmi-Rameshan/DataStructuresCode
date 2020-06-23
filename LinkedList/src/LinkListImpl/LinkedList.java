@@ -1,7 +1,7 @@
 package LinkListImpl;
 
 public class LinkedList{
-	Node head;
+	public Node head;
 	Node tail;
 	public LinkedList(Node tail,Node head)
 	{
