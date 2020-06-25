@@ -20,7 +20,7 @@ public class QueueImplementation {
 	 {
 		 if (length == a.length)
 		 {
-			 System.out.println("stack full");
+			 System.out.println("Queue full");
 		 }
 		 a[back] = item;
 		 back = (back + 1) % a.length;
@@ -29,7 +29,7 @@ public class QueueImplementation {
 	 public int remove() 
 	 {
 		 if (length == 0)
-			 System.out.println("stack is empty");
+			 System.out.println("Queue is empty");
 		 int result = a[front];
 		 front = (front + 1) % a.length;
 		 length--;
