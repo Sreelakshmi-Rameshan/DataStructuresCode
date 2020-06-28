@@ -11,7 +11,7 @@ import java.util.Queue;
  */
 public class LevelOrder
 {
-	public void levelOrder(Node root)
+	public static void levelOrder(Node root)
 	{
 		Queue<Node> q = new LinkedList<>();
 		q.add(root);
@@ -31,7 +31,7 @@ public class LevelOrder
 				System.out.println();
 				continue;
 			}
-			System.out.println(current);
+			System.out.println(current.getData());
 
 			for (Node neighbor : current.getNeighbour())
 			{

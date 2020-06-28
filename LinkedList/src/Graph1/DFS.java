@@ -1,7 +1,7 @@
 package Graph1;
 
 public class DFS {
-public boolean dfs(Graph graph,int target)
+public static boolean dfs(Graph graph,int target)
 {
 	for(Node node : graph.getNodes())
 	{
@@ -13,7 +13,7 @@ public boolean dfs(Graph graph,int target)
 	return false;
 }
 
-private boolean dfsVisit(Node node, int target) {
+private static boolean dfsVisit(Node node, int target) {
 	node.setState(State.VISITING);
 	if(node.getData()==target)
 	{

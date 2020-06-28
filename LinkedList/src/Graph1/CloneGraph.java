@@ -4,7 +4,7 @@ import java.util.HashMap;
 
 public class CloneGraph
 {
-	public Node clone(Node root) 
+	public static Node clone(Node root) 
 	{
 		if (root == null)
 			return null;
@@ -16,7 +16,7 @@ public class CloneGraph
 		return rootCopy;
 	}
 
-	private void dfs(HashMap<Node, Node> map, Node root)
+	private static void dfs(HashMap<Node, Node> map, Node root)
 	{
 		root.setState(State.VISITING);
 

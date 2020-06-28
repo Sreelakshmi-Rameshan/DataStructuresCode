@@ -4,7 +4,7 @@ import java.util.Stack;
 
 public class TopologicalSort
 {
-	public Stack<Node> topoSort(Graph g)
+	public static Stack<Node> topoSort(Graph g)
 	{
 		Stack<Node> stack = new Stack<>();
 		for (Node node : g.getNodes())

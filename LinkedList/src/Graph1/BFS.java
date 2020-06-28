@@ -12,10 +12,7 @@ public class BFS
 		{
 			if (node.getState() == State.UNVISITED && bfsVisit(node, target))
 			{
-				if (node.getData() == target)
-				{
-					return true;
-				}
+				return true;
 			}
 		}
 		return false;
