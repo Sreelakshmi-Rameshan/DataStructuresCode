@@ -16,6 +16,7 @@ public class GraphTest {
 		Node SEVEN=new Node(7);
 		Node EIGHT=new Node(8);
 		Node NINE=new Node(9);
+		Node TEN=new Node(10);
 
 		ONE.setState(State.UNVISITED);
 		TWO.setState(State.UNVISITED);
@@ -26,7 +27,8 @@ public class GraphTest {
 		SEVEN.setState(State.UNVISITED);
 		EIGHT.setState(State.UNVISITED);
 		NINE.setState(State.UNVISITED);
-
+		TEN.setState(State.UNVISITED);
+		
 		List<Node> nodes =new LinkedList<Node>();
 		nodes.add(ONE);
 		nodes.add(TWO);
@@ -37,6 +39,7 @@ public class GraphTest {
 		nodes.add(SEVEN);
 		nodes.add(EIGHT);
 		nodes.add(NINE);
+		nodes.add(TEN);
 		
 		List<Node> onesNeighbor =new LinkedList<Node>();
 		List<Node> twoNeighbor =new LinkedList<Node>();
@@ -44,7 +47,8 @@ public class GraphTest {
 		List<Node> fiveNeighbor =new LinkedList<Node>();
 		List<Node> sixNeighbor =new LinkedList<Node>();
 		List<Node> eightNeighbor =new LinkedList<Node>();
-		
+		List<Node> nineNeighbor =new LinkedList<Node>();
+
 		onesNeighbor.add(TWO);
 		onesNeighbor.add(FOUR);
 		twoNeighbor.add(THREE);
@@ -54,7 +58,7 @@ public class GraphTest {
 		sixNeighbor.add(SEVEN);
 		sixNeighbor.add(EIGHT);
 		eightNeighbor.add(NINE);
-
+		nineNeighbor.add(TEN);
 		
 		ONE.setNeighbour(onesNeighbor);
 		TWO.setNeighbour(twoNeighbor);
@@ -62,6 +66,7 @@ public class GraphTest {
 		FIVE.setNeighbour(fiveNeighbor);
 		SIX.setNeighbour(sixNeighbor);
 		EIGHT.setNeighbour(eightNeighbor);
+		NINE.setNeighbour(nineNeighbor);
 		
 		Graph graph=new Graph(nodes);
 		
@@ -82,5 +87,8 @@ public class GraphTest {
 		
 		//Clone graph
 		System.out.println(CloneGraph.clone(ONE).getData());
+		
+		//Diameter Using Level Order
+		DiameterUsingLevelOrder.DiameterUsingLO(ONE);
 	}
 }
