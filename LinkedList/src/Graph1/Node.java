@@ -8,7 +8,15 @@ public class Node {
 	List<Node> neighbour;
 	State state;
     int longestPath;
+    int nodeLevel;
+    int color;
 
+public int getColor() {
+		return color;
+	}
+	public void setColor(int color) {
+		this.color = color;
+	}
 public Node(int data)
 {
 	super();
@@ -40,5 +48,12 @@ public List<Node> getNeighbour() {
 public void setNeighbour(List<Node> neighbour) {
 	this.neighbour = neighbour;
 }
+public int getNodeLevel() {
+	return nodeLevel;
+}
+public void setNodeLevel(int nodeLevel) {
+	this.nodeLevel = nodeLevel;
+}
+
 	
 }

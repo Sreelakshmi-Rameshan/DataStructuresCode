@@ -4,6 +4,8 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Stack;
 
+import Graph2.DetectCycle;
+
 public class GraphTest {
 	public static void main(String args[])
 	{
@@ -46,8 +48,8 @@ public class GraphTest {
 		List<Node> fourNeighbor =new LinkedList<Node>();
 		List<Node> fiveNeighbor =new LinkedList<Node>();
 		List<Node> sixNeighbor =new LinkedList<Node>();
-		List<Node> eightNeighbor =new LinkedList<Node>();
-		List<Node> nineNeighbor =new LinkedList<Node>();
+		//List<Node> eightNeighbor =new LinkedList<Node>();
+		//List<Node> nineNeighbor =new LinkedList<Node>();
 
 		onesNeighbor.add(TWO);
 		onesNeighbor.add(FOUR);
@@ -57,20 +59,20 @@ public class GraphTest {
 		fiveNeighbor.add(NINE);
 		sixNeighbor.add(SEVEN);
 		sixNeighbor.add(EIGHT);
-		eightNeighbor.add(NINE);
-		nineNeighbor.add(TEN);
+		//eightNeighbor.add(NINE);
+		//nineNeighbor.add(TEN);
 		
 		ONE.setNeighbour(onesNeighbor);
 		TWO.setNeighbour(twoNeighbor);
 		FOUR.setNeighbour(fourNeighbor);
 		FIVE.setNeighbour(fiveNeighbor);
 		SIX.setNeighbour(sixNeighbor);
-		EIGHT.setNeighbour(eightNeighbor);
-		NINE.setNeighbour(nineNeighbor);
+		//EIGHT.setNeighbour(eightNeighbor);
+		//NINE.setNeighbour(nineNeighbor);
 		
 		Graph graph=new Graph(nodes);
 		
-		System.out.println(DFS.dfs(graph,3));
+		/*System.out.println(DFS.dfs(graph,3));
 		System.out.println(BFS.Bfs(graph,3));
 		LevelOrder.levelOrder(ONE);
 		
@@ -89,6 +91,8 @@ public class GraphTest {
 		System.out.println(CloneGraph.clone(ONE).getData());
 		
 		//Diameter Using Level Order
-		DiameterUsingLevelOrder.DiameterUsingLO(ONE);
+		DiameterUsingLevelOrder.DiameterUsingLO(ONE);*/
+		
+		System.out.println(DetectCycle.HasCycle(graph));
 	}
 }
