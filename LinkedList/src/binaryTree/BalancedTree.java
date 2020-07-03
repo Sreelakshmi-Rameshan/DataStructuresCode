@@ -1,12 +1,12 @@
 package binaryTree;
 
 public class BalancedTree {
-public boolean IsBalanced(TreeNode root)
+public static boolean IsBalanced(TreeNode root)
 {
 	return BalancedHelper(root)!= -1;
 }
 
-private int BalancedHelper(TreeNode root) {
+public static int BalancedHelper(TreeNode root) {
 	if(root==null)
 		return 0;
 	int leftHeight=BalancedHelper(root.getLeft());
